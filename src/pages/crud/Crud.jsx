@@ -178,11 +178,11 @@ function FormFRAP({ inicial, onGuardar, onCancelar, titulo }) {
 
 function Footer() {
   const redes = [
-    { label: "Facebook",   icon: "📘", url: "https://www.facebook.com/share/18MXAw6KBS/?mibextid=wwXIfr" },
-    { label: "Instagram",  icon: "📸", url: "https://www.instagram.com/h_i_g_e_a?igsh=MXY0NmNpZ3dnZHZxcg%3D%3D&utm_source=qr" },
-    { label: "TikTok",     icon: "🎵", url: "https://www.tiktok.com/@h.i.g.e.a?_r=1&_t=ZS-95Z5qmmoXVI" },
-    { label: "YouTube",    icon: "▶️", url: "https://youtube.com/@higea-s4b?si=B1MVki6YNTnbxdRV" },
-    { label: "Página Web", icon: "🌐", url: "https://higea-frap-web.vercel.app/" },
+    { label: "Facebook",  url: "https://www.facebook.com/share/18MXAw6KBS/?mibextid=wwXIfr" },
+    { label: "Instagram", url: "https://www.instagram.com/h_i_g_e_a?igsh=MXY0NmNpZ3dnZHZxcg%3D%3D&utm_source=qr" },
+    { label: "TikTok",    url: "https://www.tiktok.com/@h.i.g.e.a?_r=1&_t=ZS-95Z5qmmoXVI" },
+    { label: "YouTube",   url: "https://youtube.com/@higea-s4b?si=B1MVki6YNTnbxdRV" },
+    { label: "Página Web", url: "https://higea-frap-web.vercel.app/" },
   ];
 
   const linkStyle = {
