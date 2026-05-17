@@ -439,7 +439,7 @@ export default function Crud() {
             <div style={{ background: "#fff3f3", border: `1.5px solid ${C.rojo}44`,
               borderRadius: 10, padding: "12px 18px", marginBottom: 20,
               color: C.rojo, fontSize: 14, fontWeight: 600 }}>
-              ⚠️ Zona de eliminación. Esta acción es permanente e irreversible.
+              Zona de eliminación. Esta acción es permanente e irreversible.
             </div>
             <div style={{ background: "white", borderRadius: 12,
               border: `1.5px solid ${C.gris}`, overflow: "hidden" }}>
