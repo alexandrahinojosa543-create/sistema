@@ -1,5 +1,10 @@
 import { Grid, Card, CardContent, Typography, Box, Avatar, Stack, Chip } from "@mui/material";
 import PageContainer from "../../components/common/PageContainer";
+import sebasImg from "./sebatian.jpeg";
+import karlaImg from "./karla.jpeg";
+import alexImg from "./alexandra.jpeg";
+import fatimaImg from "./fátima.jpeg";    
+import shailaImg from "./shaila.jpeg";
 
 const integrantes = [
 { 
@@ -7,6 +12,7 @@ const integrantes = [
     matricula: "2022150480025",
     carrera: "Ingeniería en Sistemas Computacionales",
     correo: "2022150480025@tesjo.edu.mx",
+    foto: sebasImg,
     rol: "Frontend",
     descripcion: "Apasionado por el desarrollo de interfaces modernas y la experiencia de usuario. Lidera el diseño visual del sistema FRAP."
 },
@@ -15,6 +21,7 @@ const integrantes = [
     matricula: "2022150480397",
     carrera: "Ingeniería en Sistemas Computacionales",
     correo: "2022150480397@tesjo.edu.mx",
+    foto:karlaImg,
     rol: "Backend",
     descripcion: "Especialista en bases de datos y lógica de servidor. Asegura la integridad y seguridad de la información médica."
 },
@@ -23,6 +30,7 @@ const integrantes = [
     matricula: "2022150480542",
     carrera: "Ingeniería en Sistemas Computacionales",
     correo: "2022150480542@tesjo.edu.mx",
+    foto:alexImg,
     rol: "Frontend",
     descripcion: "Creativa, se encarga de la maquetación y componentes reutilizables para una interfaz amigable."
 },
@@ -31,6 +39,7 @@ const integrantes = [
     matricula: "2022150480547",
     carrera: "Ingeniería en Sistemas Computacionales",
     correo: "2022150480547@tesjo.edu.mx",
+    foto:fatimaImg,
     rol: "Backend",
     descripcion: "Experta en APIs REST y optimización de consultas. Implementa la lógica de negocio del sistema."
 },
@@ -39,6 +48,7 @@ const integrantes = [
     matricula: "2022150481189",
     carrera: "Ingeniería en Sistemas Computacionales",
     correo: "2022150481189@tesjo.edu.mx",
+    foto:shailaImg,
     rol: "Frontend",
     descripcion: "Desarrolladora frontend con enfoque en accesibilidad y rendimiento. Colabora en la integración con backend."
 },
