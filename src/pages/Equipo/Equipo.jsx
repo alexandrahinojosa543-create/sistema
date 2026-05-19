@@ -1,12 +1,47 @@
-import { Grid, Card, CardContent, Typography, Box } from "@mui/material";
+import { Grid, Card, CardContent, Typography, Box, Avatar, Stack, Chip } from "@mui/material";
 import PageContainer from "../../components/common/PageContainer";
 
 const integrantes = [
-{ nombre: "Sebastián Álvarez Narcizo",   rol: "Frontend" },
-{ nombre: "Karla Gerardo Faustino",      rol: "Backend"  },
-{ nombre: "Alexandra Hinojosa Becerril", rol: "Frontend" },
-{ nombre: "Fátima Hurtado Rodríguez",    rol: "Backend"  },
-{ nombre: "Shaila Vite Antonio",         rol: "Frontend" },
+{ 
+    nombre: "Sebastián Álvarez Narcizo", 
+    matricula: "2022150480025",
+    carrera: "Ingeniería en Sistemas Computacionales",
+    correo: "2022150480025@tesjo.edu.mx",
+    rol: "Frontend",
+    descripcion: "Apasionado por el desarrollo de interfaces modernas y la experiencia de usuario. Lidera el diseño visual del sistema FRAP."
+},
+{ 
+    nombre: "Karla Gerardo Faustino", 
+    matricula: "2022150480397",
+    carrera: "Ingeniería en Sistemas Computacionales",
+    correo: "2022150480397@tesjo.edu.mx",
+    rol: "Backend",
+    descripcion: "Especialista en bases de datos y lógica de servidor. Asegura la integridad y seguridad de la información médica."
+},
+{ 
+    nombre: "Alexandra Hinojosa Becerril", 
+    matricula: "2022150480542",
+    carrera: "Ingeniería en Sistemas Computacionales",
+    correo: "2022150480542@tesjo.edu.mx",
+    rol: "Frontend",
+    descripcion: "Creativa, se encarga de la maquetación y componentes reutilizables para una interfaz amigable."
+},
+{ 
+    nombre: "Fátima Hurtado Rodríguez", 
+    matricula: "2022150480547",
+    carrera: "Ingeniería en Sistemas Computacionales",
+    correo: "2022150480547@tesjo.edu.mx",
+    rol: "Backend",
+    descripcion: "Experta en APIs REST y optimización de consultas. Implementa la lógica de negocio del sistema."
+},
+{ 
+    nombre: "Shaila Vite Antonio", 
+    matricula: "2022150481189",
+    carrera: "Ingeniería en Sistemas Computacionales",
+    correo: "2022150481189@tesjo.edu.mx",
+    rol: "Frontend",
+    descripcion: "Desarrolladora frontend con enfoque en accesibilidad y rendimiento. Colabora en la integración con backend."
+},
 ];
 
 const C = {
@@ -52,10 +87,19 @@ return (
         <Grid container spacing={3}>
             {integrantes.map((p, i) => (
             <Grid item xs={12} md={6} key={i}>
-                <Card>
+                <Card sx={{ height: '100%' }}>
                 <CardContent>
-                    <Typography variant="h6">{p.nombre}</Typography>
-                    <Typography>Rol: {p.rol}</Typography>
+                    <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 2 }}>
+                    <Avatar src={p.foto} sx={{ width: 70, height: 70 }} />
+                    <Box>
+                        <Typography variant="h6">{p.nombre}</Typography>
+                        <Typography variant="body2" color="textSecondary">{p.rol}</Typography>
+                    </Box>
+                    </Stack>
+                    <Typography variant="body2"><strong>Matrícula:</strong> {p.matricula}</Typography>
+                    <Typography variant="body2"><strong>Carrera:</strong> {p.carrera}</Typography>
+                    <Typography variant="body2"><strong>Correo:</strong> {p.correo}</Typography>
+                    <Typography variant="body2" sx={{ mt: 1 }}><strong>Biografía:</strong> {p.descripcion}</Typography>
                 </CardContent>
                 </Card>
             </Grid>
