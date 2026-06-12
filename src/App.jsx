@@ -5,10 +5,13 @@ import Crud from "./pages/crud/Crud"
 import MainLayout from "./layout/MainLayout"
 import LoginPage from "./pages/auth/LoginPage"
 import RegisterPage from "./pages/auth/RegisterPage"
+import { AuthProvider } from "./context/AuthContext"
+
 
 function App() {
-  
   return (
+    <AuthProvider>
+    {
     <Router>
       <MainLayout>
         <Routes>
@@ -22,8 +25,10 @@ function App() {
         </Routes>
       </MainLayout>
     </Router>
+    }
+  </AuthProvider>
     
-  )
+  );
 }
 
 export default App

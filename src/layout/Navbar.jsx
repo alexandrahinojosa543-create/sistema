@@ -16,6 +16,7 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 
 export default function Navbar({ toggleDrawer, toggleCollapse }) {
@@ -23,6 +24,12 @@ export default function Navbar({ toggleDrawer, toggleCollapse }) {
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const { user, logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
 
   const handleMenu = () => {
     if (isMobile) {
@@ -67,7 +74,24 @@ export default function Navbar({ toggleDrawer, toggleCollapse }) {
         {/* AUTH AREA */}
         <Stack direction="row" spacing={2} alignItems="center">
 
-          {(
+          {user ? (
+            <>
+              {/* USER NAME */}
+              <Typography variant="body2" sx={{ mr: 1 }}>
+                {user.name}
+              </Typography>
+              
+              {/* LOGOUT */}
+              <Button
+                variant="outlined"
+                color="inherit"
+                startIcon={<LogoutIcon />}
+                onClick={handleLogout}
+              >
+                Logout
+              </Button>
+            </>
+          ) : (
             <>
               {/* LOGIN */}
               <Button

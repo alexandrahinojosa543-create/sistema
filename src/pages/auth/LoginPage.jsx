@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 import {
   Container,
@@ -12,6 +14,9 @@ import {
 } from "@mui/material";
 
 export default function LoginPage() {
+
+  const { login} = useAuth ();
+  const navigate = useNavigate ();
 
   const [form, setForm] = useState({
     email: "",
@@ -75,19 +80,24 @@ export default function LoginPage() {
 
       setLoading(true);
       setSuccess("");
+      setErrors({});
 
-      await new Promise((resolve) =>
-        setTimeout(resolve, 1500)
-      );
-
-      console.log("Datos del login:", form);
+      await login({
+        email: form.email,
+        password: form.password
+      });
 
       setSuccess("Login correcto");
+      
+      // Redirigir a CRUD después de 1 segundo
+      setTimeout(() => {
+        navigate("/crud");
+      }, 1000);
 
     } catch (error) {
 
       setErrors({
-        general: "Algo salió mal"
+        general: error.response?.data?.message || "Usuario no encontrado o contraseña incorrecta"
       });
 
     } finally {
